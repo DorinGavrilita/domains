@@ -1,2 +1,2 @@
 # Domains
-$fdfg
+=>Open Server Panel
