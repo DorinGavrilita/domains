@@ -10,6 +10,10 @@
 
 <body>
 	<?php
+	$user = "Dorin";
+	if (true) {
+		echo "Variable exists";
+	}
 	?>
 </body>
 
