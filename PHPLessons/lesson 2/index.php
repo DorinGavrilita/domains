@@ -15,12 +15,13 @@
     ?>
     <br>
     <?php
-    echo 9 + 3 - 4;
-    echo "Text";
+    echo 9 + 3 - 4 . "<br>";
+    echo "Text <br>";
     ?>
     <br>
 
     <?php
+    // mt_rand — Генерирует случайное значение методом с помощью генератора простых чисел
     if (mt_rand(0, 1)) {
     ?>
         <div style="color: blue">Синий текст.</div>
