@@ -1,13 +1,9 @@
 <!doctype html>
-
 <html>
 
 <head>
-
     <meta charset="utf-8">
-
     <title>PHP Calculator</title>
-
     <style>
         p {
             font-size: 12px;
@@ -25,8 +21,8 @@
     <h2>OOP calculator</h2>
     <br>
     <form action="calc.php" method="POST">
-        <input type="text" name="num1Inserted">
-        <input type="text" name="num2Inserted">
+        <input type="number" name="num1Inserted">
+        <input type="number" name="num2Inserted">
         <select name="calInserted">
             <option value="add">Add</option>
             <option value="sub">Subtract</option>
