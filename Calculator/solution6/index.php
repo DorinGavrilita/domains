@@ -10,24 +10,57 @@
 </head>
 
 <body>
-	<h3>Calculator 6</h3>
-	<form method="POST" style="text-align: center;">
-		<section>
-			<button type="submit" name="num1" value="1">1</button>
-			<button type="submit" name="num1" value="1">1</button>
-			<button type="submit" name="num1" value="1">1</button>
-			<button type="submit" name="num1" value="1">1</button>
-			<button type="submit" name="num1" value="1">1</button>
-			<button type="submit" name="num1" value="1">1</button>
-			<button type="submit" name="num1" value="1">1</button>
-			<button type="submit" name="num1" value="1">1</button>
-			<button type="submit" name="num1" value="1">1</button>
-			<button type="submit" name="num1" value="1">1</button>
-			<button type="submit" name="num1" value="1">1</button>
-			<button type="submit" name="num1" value="1">1</button>
-			<button type="submit" name="num1" value="1">1</button>
-		</section>
-	</form>
+	<main>
+		<!-- <h3>Calculator 6</h3> -->
+
+		<form class="container" method="POST">
+			<div class="display-top">
+				<div class="display-1">0</div>
+				<div class="display-2">0</div>
+				<div class="temp-result">0</div>
+			</div>
+			<section class="all_buttons" id="calculator-buttons">
+				<!--(Memory Clear) -стереть данные из ячейки памяти.-->
+				<button type="submit" name="sub" value="mc">MC</button>
+				<!--(Memory Read) -считать число из ячейки памяти и вывести его на дисплей.-->
+				<button type="submit" name="sub" value="mr">MR</button>
+				<!-- MS (Memory Save) -сохранить число, отображенное в данный момент на дисплее калькулятора в память.-->
+				<button type="submit" name="sub" value="ms">MS</button>
+				<button type="submit" name="sub" value="m+">M+</button> <!-- M+ - добавление числа которое на экране к памяти -->
+				<button type="submit" name="sub" value="m-">M-</button> <!-- М- - вычитание числа, которое на экране из памяти -->
+				<button type="submit" name="sub" value="(">(</button>
+				<button type="submit" name="sub" value=".">.</button>
+				<button type="submit" name="sub" value=")">)</button>
+				<button type="submit" name="sub" value="C">C</button>
+				<button class="all-clean" type="submit" name="sub" value="AC">AC</button>
+				<button type="submit" name="sub" value="7">7</button>
+				<button type="submit" name="sub" value="8">8</button>
+				<button type="submit" name="sub" value="9">9</button>
+				<button type="submit" name="sub" value="/">/</button>
+				<button type="submit" name="sub" value="abs">abs</button>
+				<button type="submit" name="sub" value="4">4</button>
+				<button type="submit" name="sub" value="5">5</button>
+				<button type="submit" name="sub" value="6">6</button>
+				<button type="submit" name="sub" value="*">*</button>
+				<button type="submit" name="sub" value="mod">mod</button>
+				<button type="submit" name="sub" value="1">1</button>
+				<button type="submit" name="sub" value="2">2</button>
+				<button type="submit" name="sub" value="3">3</button>
+				<button type="submit" name="sub" value="-">-</button>
+				<button type="submit" name="sub" value="+">+</button>
+				<button type="submit" name="sub" value="0">0</button>
+				<button type="submit" name="sub" value="cos">cos</button>
+				<button type="submit" name="sub" value="sin">sin</button>
+				<button type="submit" name="sub" value="+/-">+/-</button>
+				<button type="submit" name="sub" value="=">=</button>
+			</section>
+			<div class="display-bottom">
+				<div class="display-3">BIN: 0</div>
+				<div class="display-4">OCT: 0</div>
+				<div class="display-5">HEX: 0</div>
+			</div>
+		</form>
+	</main>
 
 	<?php
 	class Calcul
@@ -38,6 +71,42 @@
 
 		public function __construct($num1, $num2, $calc)
 		{
+			$this->num1 = $num1;
+			$this->num2 = $num2;
+			$this->calc = $calc;
+		}
+
+		public function Calculate()
+		{
+			switch ($this->calc) {
+				case '+':
+					$sol = $this->num1 + $this->num2;
+					break;
+				case '-':
+					$sol = $this->num1 - $this->num2;
+					break;
+				case '*':
+					$sol = $this->num1 * $this->num2;
+					break;
+				case '/':
+					$sol = $this->num1 / $this->num2;
+					break;
+				case 'sqrt':
+					$sol = sqrt($this->num1);
+					break;
+				case 'pow':
+					$sol = $this->num1 ** $this->num2;
+					break;
+				case 'sin':
+					$sol = sin($this->num1);
+					break;
+				case 'cos':
+					$sol = cos($this->num1);
+					break;
+
+				default:
+					return "Sorry No command found";
+			}
 		}
 	}
 	?>

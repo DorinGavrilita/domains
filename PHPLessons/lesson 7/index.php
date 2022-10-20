@@ -9,12 +9,14 @@
 </head>
 
 <body>
+	<!-- Логический и строковый тип данных -->
 	<?php
 	$bool = true;
+	$bool = false;
 	?>
 	<br>
 	<?php
-	$str = "Hello world! I'm Dorin.";
+	echo $str = "Hello world! I'm Dorin.";
 	?>
 	<br>
 	<?php
@@ -27,7 +29,7 @@
 	<br>
 	<?php
 	$var = 2022;
-	echo "Hello world! - {$var}.28";
+	echo "Hello world! - {$var}.28"; // Выводим переменную и текст/цифры рядом без пробела между ними
 	?>
 	<br>
 	<?php

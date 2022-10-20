@@ -34,7 +34,7 @@
 		foreach ($tests as $element) {
 			// Возвращает true, если value является числом или строкой, содержащей число или false в противном случае.
 			if (is_numeric($element)) {
-				echo var_export($element, true) . " is numeric", PHP_EOL . "<br>";
+				echo var_export($element, true) . " is numeric", PHP_EOL . "<br>"; //var_export() возвращает структурированную информацию о данной переменной. 
 			} else {
 				echo var_export($element, true) . " is NOT numeric", PHP_EOL . "<br>";
 			}

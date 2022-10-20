@@ -5,14 +5,14 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>9. Explicit and implicit type conversion</title>
+	<title>9. Explicit and implicit type conversion</title> <!-- Явное и неявное приведение типов -->
 </head>
 
 <body>
 	<div style="margin: 50px;">
 		<?php
 		// Неявное приведение типов
-		$str = '45.2hjgfd';
+		$str = '45.2gghjjjgf';
 		$number = $str - 12;
 		echo $number . "<br>";
 		// Преобразование к логическому типу
@@ -34,7 +34,7 @@
 	</div>
 	<div style="margin: 50px;">
 		<?php
-		// Как узнать чётность число с помощью приведения типов
+		// Как узнать чётность числа с помощью приведения типов
 		$num = 50;
 		$f = (float)($num / 2) - (int)($num / 2);
 		if ($f) {
