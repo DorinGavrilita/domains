@@ -10,7 +10,7 @@
 
 <body>
     <?php
-    echo "Current date and time.";
+    echo "Current date and time.<br>";
     echo date(DATE_RSS);
     ?>
     <br>

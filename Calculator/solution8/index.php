@@ -37,7 +37,7 @@ class PHP_Calculator
 }
 
 $cal = new PHP_Calculator();
-if (isset($_POST['submit'])) {
+if (isset($_POST['op'])) {
 	if (!empty($_POST['No1'] or $_POST['No2'])) {
 		$result = $cal->getresult($_POST['No1'], $_POST['No2'], $_POST['op']);
 	} else
@@ -62,17 +62,17 @@ if (isset($_POST['submit'])) {
 
 		<tr>
 			<td>Select Operator</td>
-			<td><select name="op">
-					<option value="+">+</option>
-					<option value="-">-</option>
-					<option value="*">*</option>
-					<option value="/">/</option>
-				</select></td>
+			<td>
+					<input type="submit" name="op" value="+">
+					<input type="submit" name="op" value="-">
+					<input type="submit" name="op" value="*">
+					<input type="submit" name="op" value="/">
+				</td>
 		</tr>
 
 		<tr>
 			<td></td>
-			<td><input type="submit" name="submit" value="                =                "></td>
+			<!-- <td><input type="submit" name="submit" value="                =                "></td> -->
 		</tr>
 
 	</table>
