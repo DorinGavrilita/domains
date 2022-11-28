@@ -1,0 +1,14 @@
+#image_section {
+	background-image: url("../img/content-back.jpg");
+	height: 600px;
+}
+
+.task:hover {
+	cursor: pointer;
+	background-color: red;
+}
+
+#contacts {
+	background-image: url("../img/foot-bg.png");
+	height: 400px;
+}
